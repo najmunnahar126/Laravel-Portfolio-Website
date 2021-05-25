@@ -1,2 +1,2 @@
-# Lravel-Portfolio-Website
+# Laravel-Portfolio-Website
  Laravel Portfoilo Website
