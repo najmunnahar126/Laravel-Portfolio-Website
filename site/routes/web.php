@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TeamController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class,'HomeIndex']);
+Route::get('/team', [TeamController::class,'TeamPage']);
+Route::get('/Contact', [ContactController::class,'ContactPage']);
+Route::post('/contactSend', [HomeController::class,'ContactSend']);
